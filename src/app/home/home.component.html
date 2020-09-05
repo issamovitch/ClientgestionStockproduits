@@ -1,0 +1,16 @@
+<div class="container-fluid pt-3">
+  <div class="row body">
+    <div class="col-lg-2 border pt-2" *ngIf="showHideSideBar" style="min-height: 600px;">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-10">
+      <div class="border" style="min-height: 600px;">
+        <app-navbar
+          (showHideSideBarChange)="onShowSideBarChange($event)"
+          [showHideSideBarButton]="showHideSideBar"
+        ></app-navbar>
+        <app-content></app-content>
+      </div>
+    </div>
+  </div>
+</div>

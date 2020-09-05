@@ -1,0 +1,13 @@
+<nav class="hidden-xs-down bg-faded sidebar">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item" *ngIf="hasRoleUser()">
+      <a [routerLink]="[{outlets: {contentOutlet: 'dashboard'}}]" routerLinkActive="active" class="nav-link">Dashboard</a>
+    </li>
+    <li class="nav-item" *ngIf="hasRoleUser()">
+      <a [routerLink]="[{outlets: {contentOutlet: 'produits'}}]" routerLinkActive="active" class="nav-link">Produits</a>
+    </li>
+    <li class="nav-item" *ngIf="hasRoleAdmin()">
+      <a [routerLink]="[{outlets: {contentOutlet: 'users'}}]" routerLinkActive="active" class="nav-link">Users</a>
+    </li>
+  </ul>
+</nav>
